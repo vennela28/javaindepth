@@ -35,20 +35,50 @@ class BasicsDemo {
 	char charA = 'A'; // character literal 'A'
 	System.out.println("character literal 'A': "+charA);
 	char charInt = 65;
-	System.out.println("Integer 65 mapped to character 'A' in UTF16: "+charInt);
+	System.out.println("Integer 65 mapped to character 'A' in UTF-16: "+charInt);
 	char charUnicode = '\u0041'; // 4 * (16 power 1 )+ 1 * (16 power 0) 
 	System.out.println("Unicode number 41 gets mapped to 65 decimal which gets mapped to 'A' in UTF-16 : " + charUnicode);
 	char charHex = 0x41;     // 4 * (16 power 1 )+ 1 * (16 power 0)
 	System.out.println("Hexadecimal number 0x41 gets mapped to 65 decimal which gets mapped to 'A' in UTF-16 : " + charHex);
 	char charBinary = 0b01000001; // binary corresponding to decimal 65
 	System.out.println("Binary number gets mapped to 65 decimal which gets mapped to 'A' in UTF-16 : " + charBinary);	
-	
   }
+  
+  static void typeCasting(){
+	System.out.println("\nInside Typecasting");
+	
+	// Explicit Casting
+	long y = 42;
+	// x = y; - compile time error - y gets evaluated to 42 only at runtime; compiler knows type of y which is long - incompatible types: possible lossy conversions from long to int
+	int x = (int) y;
+	
+	// Information loss due to out-of-range assignment - So explicit casting is required
+	byte b = (byte)1234567;
+	System.out.println("b: "+b);
+	
+	// Explicit casting - Truncation
+	int i = (int) 0.99;
+	System.out.println("Explicit casting - Truncated value is returned: "+i);
+	
+	// Implicit cast (int to long)
+	y = x;
+	
+	// Implicit cast (char to int);
+	char c = 'A';
+	int j = c;
+	System.out.println("Character is casted to int implicitly: "+j);
+	
+	// Explicit casting - byte to char
+	byte byteChar = 65;  
+	char ch = (char)byteChar;  // special conversion where byte is converted to int - widening and then int is converted to char - narrowing
+	System.out.println("Explicit casting - byte to char: " +ch);
+  }
+  
   public static void main(String[] args) {	
 	   	// Language Basics 1
 		print();	
 		primitives();
-		
+		typeCasting();
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
 		
