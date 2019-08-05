@@ -31,6 +31,7 @@ class BasicsDemo {
 	int underscore = 1_23_456;
 	System.out.println("Integer representation in underscore (Java 7): " +underscore);
 	
+	  
 	System.out.println("\nCharacter Datatype - UTF-16 character encoding is used by JAVA to internally store characters. - 16 bit unsigned integer");
 	char charA = 'A'; // character literal 'A'
 	System.out.println("character literal 'A': "+charA);
