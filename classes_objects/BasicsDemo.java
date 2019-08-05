@@ -20,8 +20,8 @@ class BasicsDemo {
 	//  long	   64 bits	     -2^63 to 2^63-1		    0
 	//  float	   32 bits	     -3.4E+38 to 3.4E+38	    0.0f
 	//  double	   64 bits	     -1.7E+308 to 1.7E+308	    0.0
-	//  char	   16 bits	       0 to 2^16-1              '\u0000'
-	//  boolean	  JVM specific	   true or false            false
+	//  char	   16 bits	       0 to 2^16-1                '\u0000'
+	//  boolean	  JVM specific	       true or false               false
 	int intHex = 0x0041;
 	System.out.println("Hexadecimal format to Integer format : " +intHex);
 	int intChar = 'A';
