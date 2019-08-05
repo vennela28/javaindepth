@@ -13,15 +13,15 @@ class BasicsDemo {
   static void primitives(){
 	System.out.println("\n\nInside Primitives...");
 	System.out.println("\nInteger Datatype");
-	// DataType       Bit Depth           Value range         `	  Default
-	//  byte 	    8 bits           -2^7 to 2^7-1		    0
+	// DataType   Bit Depth       Value range         `	  Default
+	//  byte 		8 bits       -2^7 to 2^7-1		    	0
 	//  short	   16 bits	     -2^15 to 2^15-1		    0
 	//   int	   32 bits	     -2^31 to 2^31-1		    0
 	//  long	   64 bits	     -2^63 to 2^63-1		    0
 	//  float	   32 bits	     -3.4E+38 to 3.4E+38	    0.0f
 	//  double	   64 bits	     -1.7E+308 to 1.7E+308	    0.0
-	//  char	   16 bits	       0 to 2^16-1                '\u0000'
-	//  boolean	  JVM specific	       true or false               false
+	//  char	   16 bits	       0 to 2^16-1              '\u0000'
+	//  boolean	  JVM specific	   true or false            false
 	int intHex = 0x0041;
 	System.out.println("Hexadecimal format to Integer format : " +intHex);
 	int intChar = 'A';
@@ -31,7 +31,6 @@ class BasicsDemo {
 	int underscore = 1_23_456;
 	System.out.println("Integer representation in underscore (Java 7): " +underscore);
 	
-	  
 	System.out.println("\nCharacter Datatype - UTF-16 character encoding is used by JAVA to internally store characters. - 16 bit unsigned integer");
 	char charA = 'A'; // character literal 'A'
 	System.out.println("character literal 'A': "+charA);
