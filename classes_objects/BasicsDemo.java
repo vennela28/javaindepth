@@ -13,8 +13,8 @@ class BasicsDemo {
   static void primitives(){
 	System.out.println("\n\nInside Primitives...");
 	System.out.println("\nInteger Datatype");
-	// DataType   Bit Depth       Value range         `	  Default
-	//  byte 		8 bits       -2^7 to 2^7-1		    	0
+	// DataType       Bit Depth           Value range         `	  Default
+	//  byte 	    8 bits           -2^7 to 2^7-1		    0
 	//  short	   16 bits	     -2^15 to 2^15-1		    0
 	//   int	   32 bits	     -2^31 to 2^31-1		    0
 	//  long	   64 bits	     -2^63 to 2^63-1		    0
