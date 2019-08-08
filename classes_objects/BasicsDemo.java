@@ -1,5 +1,18 @@
 class BasicsDemo {
+  // Statement types
+  // 1. Declaration statements - we can have only declaration statements at class-level
+  // 2. Expression statements 
+  // 3. Control-flow statements
+  static int count = 7;  // declaration statement
   
+  // count = 12; - expression statement - only at method level - compilation error 
+  // count++;
+  // getCount();
+  
+  // Control - flow statements
+  // if(count == 7){
+  //  System.out.println("Compiler error"); 
+  // }
   static void print() {
     System.out.println("\n\nInside print...");
     System.out.println("Hello, world!!"); // Advance cursor to beginning of next line
