@@ -86,12 +86,20 @@ class BasicsDemo {
 	char ch = (char)byteChar;  // special conversion where byte is converted to int - widening and then int is converted to char - narrowing
 	System.out.println("Explicit casting - byte to char: " +ch);
   }
-  
+  static void arrays(){
+	  System.out.println("\nInside Arrays...");
+	  int[] a = new int[] {7, 9, 11, 13, 17, 19};
+	  int length = a.length;
+	  System.out.println("length: " +length);
+  //  System.out.println("a[6] - ArrayIndexOutOfBoundsException - runtime error " +a[6]);
+	  
+  }
   public static void main(String[] args) {	
 	   	// Language Basics 1
-		print();	
-		primitives();
-		typeCasting();
+		// print();	
+		// primitives();
+		// typeCasting();
+		arrays();
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
 		
