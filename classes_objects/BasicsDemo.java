@@ -123,14 +123,20 @@ class BasicsDemo {
 		};
 		System.out.println("The total number of iPads sold in the month of April in New York are: "+unitsSold[0][3][1]); 
   }
+  
+  static boolean search(int[] list, int key){
+	  return true;
+  }
+  
   public static void main(String[] args) {	
 	   	// Language Basics 1
 		// print();	
 		// primitives();
 		// typeCasting();
 		// arrays();
-		threeDimensionalArray();
-		
+		// threeDimensionalArray();
+		int[] m = {1, 2, 3, 4, 5};
+		System.out.println("5 is found in the array? " +search(m, 5));
 		
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
