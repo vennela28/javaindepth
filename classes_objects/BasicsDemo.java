@@ -91,15 +91,47 @@ class BasicsDemo {
 	  int[] a = new int[] {7, 9, 11, 13, 17, 19};
 	  int length = a.length;
 	  System.out.println("length: " +length);
-  //  System.out.println("a[6] - ArrayIndexOutOfBoundsException - runtime error " +a[6]);
-	  
+  //  System.out.println("a[6] - ArrayIndexOutOfBoundsException - runtime error " +a[6]);  
+  }
+  
+  static void threeDimensionalArray(){
+		int[][][] unitsSold = new int[][][] {
+							{   // New York
+								{0, 0, 0, 0},  // Jan
+								{0, 0, 0, 0},  // Feb
+								{0, 0, 0, 0},  // Mar
+								{0, 850, 0, 0},  // Apr
+							},
+							{   // San Francisco
+								{0, 0, 0, 0},  // Jan
+								{0, 0, 0, 0},  // Feb
+								{0, 0, 0, 0},  // Mar
+								{0, 0, 0, 0},  // Apr
+							},
+							{   // Chicago
+								{0, 0, 0, 0},  // Jan
+								{0, 0, 0, 0},  // Feb
+								{0, 0, 0, 0},  // Mar
+								{0, 0, 0, 0},  // Apr
+							},
+							{   // Atlanta
+								{0, 0, 0, 0},  // Jan
+								{0, 0, 0, 0},  // Feb
+								{0, 0, 0, 0},  // Mar
+								{0, 0, 0, 0},  // Apr
+							},
+		};
+		System.out.println("The total number of iPads sold in the month of April in New York are: "+unitsSold[0][3][1]); 
   }
   public static void main(String[] args) {	
 	   	// Language Basics 1
 		// print();	
 		// primitives();
 		// typeCasting();
-		arrays();
+		// arrays();
+		threeDimensionalArray();
+		
+		
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
 		
