@@ -136,7 +136,9 @@ class BasicsDemo {
 		// arrays();
 		// threeDimensionalArray();
 		int[] m = {1, 2, 3, 4, 5};
+		
 		System.out.println("5 is found in the array? " +search(m, 5));
+		System.out.println("5 is found in the array? " +search(new int[]{5, 1}, 5));
 		
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
