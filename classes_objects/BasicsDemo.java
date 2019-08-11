@@ -123,6 +123,29 @@ class BasicsDemo {
 		};
 		System.out.println("The total number of iPads sold in the month of April in New York are: "+unitsSold[0][3][1]); 
   }
+ /*
+  static double sum(double x, double y){
+	  return x + y;
+  }
+*/
+/*
+  static double sum(float x, float y){   // returning double even if we are computing float values - compatible types so no error
+	  return x + y;
+  }
+*/
+/*  
+  static float sum(double x, double y){   // returning float even if we are computing double values - incompatible types  - COMPILER ERROR
+	  return (float)(x + y);  // to overcome we do explicit casting to float
+  }
+*/
+  static double sum(double x, double y){   // caller method main on line 171 has float - incompatible types - COMPILER ERROR so type cast on line 172
+	  return x + y;  
+  }
+  
+  static double avg(double x, double y){   // 
+	  double sum = sum(x,y);
+	  return sum/2;  
+  }
   
   static boolean search(int[] list, int key){
 	  return true;
@@ -135,10 +158,22 @@ class BasicsDemo {
 		// typeCasting();
 		// arrays();
 		// threeDimensionalArray();
-		int[] m = {1, 2, 3, 4, 5};
 		
+		// Pass arrays as arguments to method
+		int[] m = {1, 2, 3, 4, 5};
 		System.out.println("5 is found in the array? " +search(m, 5));
 		System.out.println("5 is found in the array? " +search(new int[]{5, 1}, 5));
+		
+		// Methods 
+		// double d = sum(3, 4.0);  // int parameter gets type casted automatically to double - no error
+		// double d = sum(3.0f, 4.0); // compile-time error 4.0 - possible lossy conversion from double to float
+		// double d = sum(3.0f, (float)4.0); // no error since explicit casting for 4.0
+		// float d = sum(3.0f, (float)4.0);
+		float d = (float) sum(3.0f, (float)4.0);
+		System.out.println("sum: " +d);
+		
+		double d2 = avg(3.0, 2.0);
+		System.out.println("average: "+d2);
 		
 		System.out.println("\nBoolean Datatype (true, false) - default value = false");
 		boolean isInsured = true;
