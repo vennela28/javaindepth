@@ -24,6 +24,11 @@ public class CurrencyExchange{
 				can access static variables - variables that are shared across different objects of same class 
 				can access other static methods within the same class.
 				Invocation: className.methodName()
+				
+				
+	   IMPORTANT
+	   From an instance method static methods/variables can be accessed because static is global and shared across all objects. 
+	   But from static method instance methods/variables cannot be accessed because instance stuff is specific to a particular instance/object.
 	*/
 	
 	double[] exchangeRates;
