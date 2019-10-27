@@ -26,7 +26,10 @@ Varargs provides simpler & flexible invocation mechanism
 	3. foo(true, veryLargeArray); pass it to the method
 
 printf(String format, Object... args) - introduced in Java 5 - which can have varargs parameter
-System.out.printf("DOB: %d-%d-%d", 3, 28, 1990);
+First argument is the text to be printed. 
+Second, third and fourth arguments correspond to the varargs parameter.
+System.out.printf("DOB: %d-%d-%d", 3, 28, 1990);   // DOB: 3-28-1990  - % serve as placeholders. 
+                                                      At runtime, the printf method would replace the 3 % symbols with 3 argument values. 
 
 VARARGS AND OVERLOADED METHODS
 	Invalid overloaded methods
@@ -38,17 +41,17 @@ VARARGS AND OVERLOADED METHODS
 public class Varargs{
 	// #1
 	static void varargsOverload(boolean b, int i, int j, int k){  
-		System.out.println("varargsOverload without varargs");
+		System.out.println("\n\nvarargsOverload WITHOUT varargs...");
 	}
 	
 	// #2
 	static void varargsOverload(boolean b, int... items){
-		System.out.println("varargsOverload with varargs");
+		System.out.println("\nvarargsOverload WITH varargs...");
 		System.out.println("items length: "+items.length);
 	}
 	
 	public static void main(String... args){
-		System.out.printf("DOB: %d-%d-%d", 3, 28, 1990);
+		System.out.printf("\nDOB: %d-%d-%d", 3, 28, 1990);
 		
 		varargsOverload(true, 1, 2, 3); // finds the exact match #1
 		varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8, 9);  // matches #2
