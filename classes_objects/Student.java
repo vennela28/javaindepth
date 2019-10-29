@@ -59,7 +59,7 @@ public class Student{
 		
 		System.out.println("Updated Name s1: "+s1.name);	
 		
-		// Reassigning with an object reference
+		// Reassigning with an object reference - copy of memory addresses are made when they are reassigned which is similar to the object references being passed to methods
 		Student s4 = s1; // The memory address of s4 points to the memory address of s1. s4 and s1 are referencing the same object
 		System.out.println("Name s4: "+s4.name);
 
@@ -73,8 +73,9 @@ public class Student{
 		System.out.println("Name s4: "+s4.name);
 		System.out.println("Name s2: "+s2.name);
 		
-		// A new object is created
-		s4 = new Student("susan"); // If a non parameterized constructor is initialized in the code, s4.name = null 
+		// A new object is created - object corresponding to 'Babu' is still there on the heap and it does not have any references. It is orphaned and it is considered as abandoned, but it is still occupying space in the memory. 
+		// Automatic memory managament - Here the garbage collector will reclaim the memory occupied by 'Babu'.  
+		s4 = new Student("susan"); // If a non parameterized constructor is initialized in the code in lines 17 - 21, s4.name = null 
 		System.out.println("Name s4: "+s4.name); // susan is printed since a new object is created all together
 		
 		System.out.println("Name s2: "+s2.name);
