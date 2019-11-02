@@ -5,7 +5,11 @@ public class Operators{
 		//isEvenOdd(20);
 		//operatorPrecedence();
 		//charTypePromotion();
-		comparisonOperators();
+		//comparisonOperators();
+		logicalOperators();
+		Student s1 = new Student(1001, "Raj");
+		update(s1, "Vennela");
+		System.out.println(s1.name);
 	}
 	static void preAndPost(){
 		int x = 5;
@@ -117,10 +121,57 @@ public class Operators{
 	}
 	
 	static boolean update(Student s, String name){
-		if(s == null){
+	/*	if(s == null){
 			return false;
 		}
 		s.name = name;
+	*/
+		if(s != null && s.id > 1000){
+			s.name = name;
+		}
 		return true;
 	}
+	
+	static void logicalOperators(){
+	// Logical AND (&&) - conjunction, Logical OR (||) - disjunction and Logical NOT (!) - negation
+	// Comparison operators test only one condition 
+	// Logical operators test multiple conditions
+	
+	// Short-circuit Operators (&&, ||)
+	// && - Conditional AND : left operand is false, return false - right operand is not evaluated
+	// || - Conditional OR : left operand is true, return true - right operand is not evaluated
+	
+	// && prevents NullPointerException
+	/* 
+		if(s.age > 21){
+			s is object reference referencing an object reference such as Student. If s happens to be null, then it throws a NullPointerException at runtime and program execution would stopped.
+		}
+		// To prevent the above NullPointerException we can add a null check.
+		if(s != null && s.age > 21){
+			
+		}
+	*/
+	
+	int age = 37;
+	int salary = 95000;
+	boolean hasBadCredit = false;
+	
+	// 1. AND, OR, NOT & Operator chaining
+	//    NOT should have a boolean operand.
+		if((!(age <= 35) && (salary > 9000 * 10)) && (!hasBadCredit)){ // Left-to-right grouping
+			System.out.println("LOAN Approved!");
+		}else{
+			System.out.println("LOAN NOT Approved!");
+		}
+	}
+	
+	//2. (a) Left Associativity ~ Order of grouping
+	//   (b) Associativity (a && b) && c = a && (b && c)
+	//	 (c) Applies to both && and ||
+	
+	// 3. (a) Operator precedence of Logical Operators: Helps with ONLY grouping operations. Not order of execution (! > && > ||)
+	//    (b) Operator Precedence across Logical, comparison and arithmetic -   ! > arithmetic operators > comparison operators > AND > OR
+	//    (c) ALWAYS USE PARANTHESIS FOR READABILITY.
+	
+
 }
