@@ -3,8 +3,9 @@ public class Operators{
 		//preAndPost();
 		//compoundArithmeticAssignment();
 		//isEvenOdd(20);
-		operatorPrecedence();
-		charTypePromotion();
+		//operatorPrecedence();
+		//charTypePromotion();
+		comparisonOperators();
 	}
 	static void preAndPost(){
 		int x = 5;
@@ -83,5 +84,43 @@ public class Operators{
 	System.out.println("(73-c1): "+(73-c1)); // c1 gets promoted to int, i.e. decimal equivalent 50 in UTF16 is used
 	System.out.println("(c1-'3'): "+(c1-'3'));  // c1 and '3' are promoted to ints. c1 is promoted to 50 and '3' is promoted to 51. 
 	System.out.println("('a' + 'b'): "+('a' + 'b')); // 'a' and 'b' are promoted to ints and the respective equivalents 97 and 98 are added 		
+	}
+	
+	static void comparisonOperators(){
+		// comparison operators ( >, <, ==, >=, <=, (!=, ==) - equality operators) evaluates to a boolean value - true or false
+		int age = 25;
+		
+		// these 4 operators are applicable to only primitive numeric types except boolean
+		System.out.println("age > 21: "+ (age > 21));
+		System.out.println("age < 21: "+ (age < 21));
+		System.out.println("age >= 21: "+ (age >= 21));
+		System.out.println("age <= 21: "+ (age <= 21));
+		
+		// equality operators
+		System.out.println("age == 21: "+ (age == 21));
+		System.out.println("age != 21: "+ (age != 21));
+		
+		boolean isInternational = true;
+		System.out.println("isInternational == true: " +(isInternational == true));
+		System.out.println("isInternational != true: " +(isInternational != true));
+		
+		// equality operators can be used with object references
+		Student s1 = new Student(1000, "Vennela");
+		Student s2 = s1;
+		System.out.println("s1 == s2: "+(s1==s2)); // s1 and s2 are referencing the same objects.
+		
+		Student s3 = new Student(1000, "Vennela");
+		System.out.println("s1 == s3: "+(s1==s3)); // Identity comparison - s1 and s3 are referencing to different objects.
+		
+		update(null, "John");  // throws a NullPointerException as s is null and invoking on null throws a NullPointerException
+		
+	}
+	
+	static boolean update(Student s, String name){
+		if(s == null){
+			return false;
+		}
+		s.name = name;
+		return true;
 	}
 }
