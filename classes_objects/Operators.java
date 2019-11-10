@@ -16,7 +16,7 @@ public class Operators{
 		
 		//bitwiseOperators();
 		
-		bitShiftOperators();
+		//bitShiftOperators();
 	}
 	
 	// Operands are integer primitives
