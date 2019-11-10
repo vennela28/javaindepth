@@ -6,11 +6,45 @@ public class Operators{
 		//operatorPrecedence();
 		//charTypePromotion();
 		//comparisonOperators();
+		
+		/*
 		logicalOperators();
 		Student s1 = new Student(1001, "Raj");
 		update(s1, "Vennela");
 		System.out.println(s1.name);
+		*/
+		
+		bitwiseOperators();
 	}
+	
+	// Bitwise operators can be applied only on Integer of Boolean operands
+	static void bitwiseOperators(){
+		int x = 1;
+		int y = 3;
+		
+		System.out.println("x & y: "+(x & y));
+		System.out.println("x | y: "+(x | y));
+		System.out.println("x ^ y: "+(x ^ y));
+		System.out.println("~x: "+(~x));	
+		System.out.println("true & false: "+(true & false));		
+		
+		// Characters get promoted to an int. 
+		char a1 = 'a';  // U + 0061 --> 0110 0001  - corresponding int value is 97
+		char a2 = 'b';  // U + 0062 --> 0110 0010  - corresponding int value is 98
+		System.out.println("a1 | a2: "+(a1 | a2));   // 0110 0011  -->  99 in decimal
+		
+		// Since bitwise work only on Integer types, following will not compile
+		
+		/*
+		
+		double d1 = 3.14;
+		double d2 = 5.16;
+		System.out.println("d1 | d2: "+(d1 | d2)); 
+		
+		*/
+		
+	}
+	
 	static void preAndPost(){
 		int x = 5;
 		//x++;
@@ -131,7 +165,7 @@ public class Operators{
 		}
 		return true;
 	}
-	
+
 	static void logicalOperators(){
 	// Logical AND (&&) - conjunction, Logical OR (||) - disjunction and Logical NOT (!) - negation
 	// Comparison operators test only one condition 
