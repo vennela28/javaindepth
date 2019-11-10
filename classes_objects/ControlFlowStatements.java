@@ -11,7 +11,28 @@ public class ControlFlowStatements{
 		
 		If # of conditions is N, then if-Statement takes O(N) time, switch-Statement takes O(1) time. 
 		*/
-		switchStatement(); 
+		//switchStatement(); 
+		
+		forStatement();
+	}
+	
+	static void forStatement(){
+		int[] array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+		int i = 0;  // Initialization part is optional - Declaration can be done outside for block
+	//	for(int i = 0, int j = 0; i < array.length; i++){  - Invalid declaration - Compilation error
+	//	for(int i = 0, j = 0; i < array.length; i++){ - Right way of declaration
+		/* Declaration part can be expression statements.
+		int i = 0, j = 0;
+		for(i = 1, j = 1; i < array.length && j < array.length; i++, j++){ // Can have multiple expression statements in the expression part of for Statement.
+
+		*/
+		
+		// for(int i = 0; i < array.length; System.out.println(array[i++]));  - valid for statement
+		for(; i < array.length; i++){
+			System.out.println(array[i]);
+		}
+		System.out.println();
+		for(i = 0; i < array.length; System.out.println(array[i++]));
 	}
 	
 	static boolean ifStatement(){
