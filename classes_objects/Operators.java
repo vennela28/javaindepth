@@ -14,7 +14,19 @@ public class Operators{
 		System.out.println(s1.name);
 		*/
 		
-		bitwiseOperators();
+		//bitwiseOperators();
+		
+		bitShiftOperators();
+	}
+	
+	// Operands are integer primitives
+	static void bitShiftOperators(){
+		int x = 6;
+		
+		System.out.println("x << 3: "+(x << 3));  // Left Shift Operator - Multiply by powers of 2 e.g. 6 << 3 = 6 * 2³ = 48
+		System.out.println("x >>> 1: "+(x >>> 1)); // Unsigned Right Shift Operator - Divide by powers of 2  e.g. 6 >>> 1 = 6 / 2 = 3
+		
+		System.out.println("-x >> 1: "+(-x >> 1));  // Signed Right Shift Operator - padded with MSB - sign is preserved  e.g. -6 >> 1 = -6 / 2 = -3
 	}
 	
 	// Bitwise operators can be applied only on Integer of Boolean operands
